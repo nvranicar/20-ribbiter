@@ -14,4 +14,4 @@ const store = createStore(
   )
 );
 
-export default store;
+export default new Revue(Vue, store);
