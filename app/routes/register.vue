@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="register">
-    <!-- <div v-if="users.loading === 'error'" class="alert">
+    <div v-if="users.loading === 'error'" class="alert">
       <h2>There was an error with your registration.</h2>
-    </div> -->
+    </div>
     <h1 class="register__header">Create an Account</h1>
     <form @submit.prevent="save" class="register__form">
       <div class="username form-section">
@@ -18,7 +18,9 @@
         <input type="text" placeholder="Password" class="register-input" v-model="formValues.password">
       </div>
       <div class="register__footer">
-        <h2>Login</h2>
+        <h2>
+          <router-link :to="{ name: 'login' }">Login</router-link>
+        </h2>
         <button type="Submit" class="submit-button">Sign Up</button>
       </div>
     </form>

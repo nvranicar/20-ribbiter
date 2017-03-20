@@ -8,7 +8,9 @@
         <h2 class="nav-buttons">
           <span>Ribbets</span>
           <span>Frogs</span>
-          <span>Login</span>
+          <span>
+            <router-link :to="{ name: 'login' }"></router-link>
+          </span>
         </h2>
       </div>
     </div>

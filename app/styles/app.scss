@@ -12,6 +12,7 @@ $c-secondary-light: #7FC6BC;
 $c-white: #edf7f2;
 $c-pure-white: #fff;
 $c-lightGrey: #eee;
+$c-alert: rgba(#e70c0c,.63);
 
 $m-gutter: 1rem;
 $m-max-width: 60rem;
@@ -133,4 +134,10 @@ a {
   &:hover {
     background: $c-light;
   }
+}
+
+.alert {
+  background: $c-alert;
+  margin-bottom: -1.5rem;
+  color: $c-white;
 }
