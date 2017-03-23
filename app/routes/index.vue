@@ -2,8 +2,12 @@
   <div class="index">
     <h1 class="welcome">Welcome to Ribbiter!</h1>
     <div class="login">
-      <h2>Login</h2>
-      <h4>Not a member? Register</h4>
+      <h2>
+        <router-link :to="{ name: 'login' }">Login</router-link>
+      </h2>
+      <h4>
+        <router-link :to="{ name: 'register' }">Not a member? Register</router-link>
+      </h4>
     </div>
   </div>
 </template>

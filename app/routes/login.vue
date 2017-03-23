@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="register">
-    <!-- <div v-if="users.loading === 'error'" class="alert">
+    <div v-if="error === true" class="alert">
       <h2>There was an error with your login.</h2>
-    </div> -->
+    </div>
     <h1 class="register__header">Login</h1>
     <form @submit.prevent="save" class="register__form">
       <div class="email form-section">

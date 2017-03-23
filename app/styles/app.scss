@@ -13,6 +13,7 @@ $c-white: #edf7f2;
 $c-pure-white: #fff;
 $c-lightGrey: #eee;
 $c-alert: rgba(#e70c0c,.63);
+$c-shadow: rgba(#000,.5);
 
 $m-gutter: 1rem;
 $m-max-width: 60rem;
@@ -46,6 +47,13 @@ a {
   }
 }
 
+textarea {
+  background: rgba($c-secondary-light, 0.3);
+  border: none;
+  border-bottom: $c-secondary 0.2rem solid;
+  width: 100%;
+}
+
 .nav {
   padding: $m-gutter / 2;
   margin: 0;
@@ -53,6 +61,12 @@ a {
   color: $c-white;
   display: flex;
   justify-content: space-between;
+}
+
+.nav-buttons {
+  > * + * {
+    margin-left: $m-gutter;
+  }
 }
 
 .section {
@@ -75,8 +89,10 @@ a {
 .login {
   color: $c-secondary;
   > * {
-    &:hover {
-      color: $c-secondary-light;
+    > * {
+      &:hover {
+        color: $c-secondary-light;
+      }
     }
   }
 }
@@ -136,8 +152,109 @@ a {
   }
 }
 
+.clear {
+  border: none;
+  background: rgba($c-secondary-light, 0.3);
+  padding-top: -1rem;
+  margin-top: $m-gutter / 2;
+  font-size: 1.5rem;
+  color: $c-secondary;
+
+  &:hover {
+    background: $c-secondary-light;
+  }
+}
+
 .alert {
   background: $c-alert;
   margin-bottom: -1.5rem;
   color: $c-white;
+}
+
+.users-header {
+  border-bottom: 0.2rem $c-secondary solid;
+  margin: 0 $m-gutter 0.5rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: calc(33% - 2rem);
+    margin: $m-gutter;
+    flex-grow: 1;
+    min-width: 15rem;
+  }
+}
+
+.card {
+  background: $c-pure-white;
+  padding: 0.5rem;
+  overflow: auto;
+  box-shadow: 0.2rem 0.2rem 0.2rem $c-shadow;
+
+  &__heading {
+    background: $c-primary;
+    padding: 0.1rem 0.5rem;
+    margin: -0.5rem;
+    color: $c-white;
+  }
+
+  &__footer {
+    border-top: 0.1rem $c-secondary solid;
+    margin: 0.5rem -0.5rem;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.card-pic {
+  float: left;
+  margin-right: 0.5rem;
+  max-width: 50%;
+}
+
+.handle {
+  color: $c-secondary;
+  text-decoration: underline;
+}
+
+.new-ribbit {
+  margin: $m-gutter;
+  flex-basis: calc(33% - 2rem);
+  min-width: 13rem;
+  flex-grow: 1;
+}
+
+.ribbits {
+  flex-basis: calc(66% - 2rem);
+  margin: $m-gutter;
+  flex-grow: 1;
+}
+
+.ribbits-content {
+  > * + * {
+    border-top: $c-secondary 0.1rem solid;
+  }
+}
+
+.ribbit {
+  margin: 0.5rem -0.5rem;
+  padding: 0.5rem;
+}
+
+.load-ribbits {
+  border: none;
+  background: rgba($c-secondary-light, 0.3);
+  padding-top: -1rem;
+  margin-top: $m-gutter / 2;
+  font-size: 1.5rem;
+  color: $c-secondary;
+  width: 100%;
+
+  &:hover {
+    background: $c-secondary-light;
+  }
 }
