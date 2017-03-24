@@ -64,7 +64,9 @@ export default {
 
     save() {
       store.dispatch(postResource.actionCreators.create(this.formValues))
-        .then()
+        .then(() => {
+          this.formValues = {};
+        });
     }
   },
 };
